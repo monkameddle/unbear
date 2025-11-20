@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Label" />
+
+        <EditText
+            android:id="@+id/editHost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Host or IP" />
+
+        <EditText
+            android:id="@+id/editPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Port" />
+
+        <EditText
+            android:id="@+id/editUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SSH user (root)" />
+
+        <RadioGroup
+            android:id="@+id/radioAuthMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SSH password" />
+
+            <RadioButton
+                android:id="@+id/radioKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SSH private key" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editSshPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SSH password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editPrivateKey"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:hint="SSH private key"
+            android:visibility="gone"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/buttonImportKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SSH Key importieren" />
+
+        <Button
+            android:id="@+id/buttonPasteKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aus Zwischenablage einfügen" />
+
+        <Button
+            android:id="@+id/buttonDeleteKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SSH Key löschen" />
+
+        <EditText
+            android:id="@+id/editPrivateKeyPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Key password (optional)"
+            android:visibility="gone"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/checkSendUnlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send cryptroot unlock command before password" />
+
+        <EditText
+            android:id="@+id/editCryptCommand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="cryptroot command" />
+
+        <EditText
+            android:id="@+id/editLuksPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LUKS password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Abbrechen" />
+
+    </LinearLayout>
+</ScrollView>
